@@ -7,7 +7,23 @@ public class TargetModuleIDImpl implements TargetModuleID
 {
 	private Target target;
 	private String moduleID;
-	private boolean isRunning = false;
+	private Integer pid;
+
+	public TargetModuleIDImpl() {
+	}
+	
+	public TargetModuleIDImpl(TargetModuleID copy) {
+		this.target = copy.getTarget();
+		this.moduleID = copy.getModuleID();
+	}
+	
+	public Integer getPid() {
+		return pid;
+	}
+
+	public void setPid(Integer pid) {
+		this.pid = pid;
+	}
 
 	public TargetModuleIDImpl(Target target, String moduleID)
 	{
@@ -37,17 +53,7 @@ public class TargetModuleIDImpl implements TargetModuleID
 
 	public String getWebURL()
 	{
-		return moduleID;
-	}
-
-	public boolean isRunning()
-	{
-		return isRunning;
-	}
-
-	public void setRunning(boolean isRunning)
-	{
-		this.isRunning = isRunning;
+		return null;
 	}
 
 	@Override
