@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ru.onlytime.deploy</groupId>
 	<artifactId>ssh-jsr88</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<description>JSR-88 implementation for standalone based programs</description>
 
 	<licenses>
@@ -17,7 +17,7 @@
 	<scm>
 		<url>http://code.google.com/p/ssh-jsr88/source/browse/</url>
 	</scm>
-	
+
 	<repositories>
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
@@ -35,6 +35,13 @@
 	</developers>
 
 	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.enterprise.deploy</groupId>
 			<artifactId>deployment-api</artifactId>
@@ -105,8 +112,7 @@
 					</descriptors>
 					<archive>
 						<manifestEntries>
-						//TODO change
-							<J2EE-DeploymentFactory-Implementation-Class>ru.onlytime.tomcat.deploy.DeploymentFactoryImpl</J2EE-DeploymentFactory-Implementation-Class>
+							<J2EE-DeploymentFactory-Implementation-Class>ru.onlytime.ssh.deploy.DeploymentFactoryImpl</J2EE-DeploymentFactory-Implementation-Class>
 						</manifestEntries>
 					</archive>
 				</configuration>
